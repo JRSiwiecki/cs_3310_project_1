@@ -1,5 +1,4 @@
 import random
-import time
 
 # n is n*n size of matrices
 # range is list containing 2 numbers, min and max
