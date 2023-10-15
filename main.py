@@ -1,5 +1,5 @@
-from utils import generate_random_matrices, print_matrix
-from classical_matrix_multiplication import classical_matrix_multiplication
+from utilities.utils import generate_random_matrices, print_matrix
+from algorithms.classical_matrix_multiplication import classical_matrix_multiplication
 
 N = 3
 MIN = 0
