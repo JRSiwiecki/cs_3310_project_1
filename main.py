@@ -1,5 +1,7 @@
 from utilities.utils import generate_random_matrices, print_matrix
 from algorithms.classical_matrix_multiplication import classical_matrix_multiplication
+from algorithms.divide_and_conquer_matrix_multiplication import divide_and_conquer_matrix_multiplication
+from algorithms.strassen_matrix_multiplication import strassen_matrix_multiplication
 
 N = 3
 MIN = 0
@@ -15,12 +17,12 @@ print_matrix(b)
 
 print("----- CLASSICAL MATRIX MULTIPLICATION -----\n")
 print_matrix(classical_matrix_multiplication(a, b))
-print("-------------------------------------------")
+print("-------------------------------------------\n")
 
-# print("----- DIVIDE AND CONQUER MATRIX MULTIPLICATION -----\n")
+print("----- DIVIDE AND CONQUER MATRIX MULTIPLICATION -----\n")
 # print_matrix(divide_and_conquer_matrix_multiplication(a, b))
-# print("------------------------------------------------------")
+print("------------------------------------------------------\n")
 
-# print("----- STRASSEN MATRIX MULTIPLICATION -----\n")
+print("----- STRASSEN MATRIX MULTIPLICATION -----\n")
 # print_matrix(strassen_matrix_multiplication(a, b))
-# print("--------------------------------------------")
+print("--------------------------------------------\n")
