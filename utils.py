@@ -6,8 +6,8 @@ import time
 def generate_random_matrices(matrix_size, number_range):
     MIN_VALUE, MAX_VALUE = number_range
 
-    a = [[0] * matrix_size, [0] * matrix_size]
-    b = [[0] * matrix_size, [0] * matrix_size]
+    a = generate_blank_matrix(matrix_size)
+    b = generate_blank_matrix(matrix_size)
     
     for row in range(0, len(a)):
         for col in range(0, len(a[row])):
@@ -17,7 +17,6 @@ def generate_random_matrices(matrix_size, number_range):
     return [a, b]
 
 def print_matrix(matrix):
-    
     for row in range(len(matrix)):
         print("[", end="")
         for col in range(len(matrix[row])):
@@ -31,4 +30,11 @@ def print_matrix(matrix):
             print("],")
         
     print("")
+
+def generate_blank_matrix(matrix_size):
+    matrix = []
+
+    for i in range(0, matrix_size):
+        matrix.append([0] * matrix_size)
     
+    return matrix
