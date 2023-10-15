@@ -22,11 +22,8 @@ def print_matrix(matrix):
             if col == len(matrix[row]) - 1:
                 print(matrix[row][col], end="")
             else:
-                print(matrix[row][col], end=" ")
-        if row == len(matrix) - 1:
-            print("]")
-        else:
-            print("],")
+                print(matrix[row][col], end=", ")
+        print("]")
         
     print("")
 
