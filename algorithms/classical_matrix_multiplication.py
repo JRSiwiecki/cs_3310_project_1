@@ -1,4 +1,4 @@
-from utils import generate_blank_matrix
+from utilities.utils import generate_blank_matrix
 
 def classical_matrix_multiplication(a, b):
     n = len(a)
