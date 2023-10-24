@@ -3,9 +3,9 @@ from algorithms.classical_matrix_multiplication import classical_matrix_multipli
 from algorithms.divide_and_conquer_matrix_multiplication import divide_and_conquer_matrix_multiplication
 from algorithms.strassen_matrix_multiplication import strassen_matrix_multiplication
 
-N = 64
-MIN = 1
-MAX = 10
+N = 8
+MIN = 0
+MAX = 5
 
 a, b = generate_random_matrices(N, [MIN, MAX])
 
