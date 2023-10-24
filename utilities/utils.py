@@ -1,5 +1,6 @@
 import random
 import numpy
+import time
 
 # n is n*n size of matrices
 # range is list containing 2 numbers, min and max
@@ -67,3 +68,10 @@ def combine_submatrices_horizontally(a, b):
 
 def combine_submatrices_vertically(a, b):
     return numpy.vstack((a, b))
+
+def time_function(func, *args, **kwargs):
+    start_time = time.time()
+    result = func(*args, **kwargs)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    return result, execution_time
