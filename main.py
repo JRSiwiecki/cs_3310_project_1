@@ -3,7 +3,7 @@ from algorithms.classical_matrix_multiplication import classical_matrix_multipli
 from algorithms.divide_and_conquer_matrix_multiplication import divide_and_conquer_matrix_multiplication
 from algorithms.strassen_matrix_multiplication import strassen_matrix_multiplication
 
-N = 32
+N = 64
 MIN = 1
 MAX = 10
 
@@ -15,9 +15,10 @@ print_matrix(a)
 print("MATRIX B:\n")
 print_matrix(b)
 
+# need to add strassen_matrix_multiplication
 algorithms = [classical_matrix_multiplication, 
               divide_and_conquer_matrix_multiplication, 
-              strassen_matrix_multiplication]
+              ]
 
 for algorithm in algorithms:
     print(f"----- {algorithm.__name__.upper()} -----\n")
@@ -25,15 +26,3 @@ for algorithm in algorithms:
     print_matrix(result)
     print(f"Execution Time: {execution_time:.6f} seconds")
     print("-------------------------------------------\n")
-
-print("----- CLASSICAL MATRIX MULTIPLICATION -----\n")
-print_matrix(classical_matrix_multiplication(a, b))
-print("-------------------------------------------\n")
-
-print("----- DIVIDE AND CONQUER MATRIX MULTIPLICATION -----\n")
-print_matrix(divide_and_conquer_matrix_multiplication(a, b))
-print("------------------------------------------------------\n")
-
-print("----- STRASSEN MATRIX MULTIPLICATION -----\n")
-# print_matrix(strassen_matrix_multiplication(a, b))
-print("--------------------------------------------\n")
