@@ -17,6 +17,7 @@ def generate_random_matrices(matrix_size, number_range):
     
     return [a, b]
 
+# prints matrix somewhat nicely
 def print_matrix(matrix):
     for row in range(len(matrix)):
         print("[", end="")
@@ -29,6 +30,7 @@ def print_matrix(matrix):
         
     print("")
 
+# creates blank matrix to be used for generating random matrices
 def generate_blank_matrix(matrix_size):
     matrix = []
 
@@ -37,6 +39,7 @@ def generate_blank_matrix(matrix_size):
     
     return matrix
 
+# breaks down matrix into 4 submatrices
 def partition_matrix(matrix):
     matrix_length = len(matrix)
     
@@ -69,7 +72,8 @@ def combine_submatrices_horizontally(a, b):
 def combine_submatrices_vertically(a, b):
     return numpy.vstack((a, b))
 
-def time_function(func, *args, **kwargs):
+# times algorithms
+def time_algorithm(func, *args, **kwargs):
     start_time = time.time()
     result = func(*args, **kwargs)
     end_time = time.time()

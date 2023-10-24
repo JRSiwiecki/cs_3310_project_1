@@ -12,8 +12,6 @@ def divide_and_conquer_matrix_multiplication(a, b):
 
     b11, b12, b21, b22 = partition_matrix(b)
 
-
-
     c11 = add_matrices(
         divide_and_conquer_matrix_multiplication(a11, b11),
         divide_and_conquer_matrix_multiplication(a12, b21)
