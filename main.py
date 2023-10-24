@@ -20,7 +20,7 @@ print_matrix(classical_matrix_multiplication(a, b))
 print("-------------------------------------------\n")
 
 print("----- DIVIDE AND CONQUER MATRIX MULTIPLICATION -----\n")
-# print_matrix(divide_and_conquer_matrix_multiplication(a, b))
+print_matrix(divide_and_conquer_matrix_multiplication(a, b))
 print("------------------------------------------------------\n")
 
 print("----- STRASSEN MATRIX MULTIPLICATION -----\n")
