@@ -66,6 +66,20 @@ def add_matrices(a, b):
     
     return c
 
+def subtract_matrices(a,b):
+    if len(a) == 1 and len(b) == 1:
+        return [a[0] - b[0]]
+    
+    c = []
+
+    for i in range(len(a)):
+        row = []
+        for j in range(len(a[i])):
+            row.append(a[i][j] - b[i][j])
+        c.append(row)
+    
+    return c
+
 def combine_submatrices_horizontally(a, b): 
     return numpy.hstack((a, b))
 
