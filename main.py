@@ -20,7 +20,7 @@ dataset = [
 ]
 
 # total number of times to run each test case
-iterations = 2
+iterations = 5
 current_iteration_count = 1
 display_output = False
 
