@@ -72,7 +72,7 @@ def combine_submatrices_horizontally(a, b):
 def combine_submatrices_vertically(a, b):
     return numpy.vstack((a, b))
 
-# times algorithms
+# times a given algorithm and returns the algorithm result and its execution time
 def time_algorithm(func, *args, **kwargs):
     start_time = time.time()
     result = func(*args, **kwargs)

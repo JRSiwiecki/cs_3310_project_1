@@ -12,6 +12,7 @@ def divide_and_conquer_matrix_multiplication(a, b):
 
     b11, b12, b21, b22 = partition_matrix(b)
 
+    # run calculations with recursive calls
     c11 = add_matrices(
         divide_and_conquer_matrix_multiplication(a11, b11),
         divide_and_conquer_matrix_multiplication(a12, b21)
@@ -32,9 +33,11 @@ def divide_and_conquer_matrix_multiplication(a, b):
         divide_and_conquer_matrix_multiplication(a22, b22)
     )
 
+    # combine each partition into its corresponding row
     c1 = combine_submatrices_horizontally(c11, c12)
     c2 = combine_submatrices_horizontally(c21, c22)
 
+    # stack rows on top of each other
     c = combine_submatrices_vertically(c1, c2)
 
     return c

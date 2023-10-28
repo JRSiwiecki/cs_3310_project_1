@@ -3,6 +3,9 @@ from algorithms.classical_matrix_multiplication import classical_matrix_multipli
 from algorithms.divide_and_conquer_matrix_multiplication import divide_and_conquer_matrix_multiplication
 from algorithms.strassen_matrix_multiplication import strassen_matrix_multiplication
 
+# N = N * N size of matrices
+# MIN = minimum number for values inside a given matrix
+# MAX = maximum number for values inside a given matrix
 N = 8
 MIN = 0
 MAX = 5
