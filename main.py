@@ -10,13 +10,13 @@ dataset = [
     {"matrix_size": 2, "min_value": 0, "max_value": 10},
     {"matrix_size": 4, "min_value": 0, "max_value": 10},
     {"matrix_size": 8, "min_value": 0, "max_value": 10},
-    {"matrix_size": 16, "min_value": 0, "max_value": 10},
-    {"matrix_size": 32, "min_value": 0, "max_value": 10},
-    {"matrix_size": 64, "min_value": 0, "max_value": 10},
-    {"matrix_size": 128, "min_value": 0, "max_value": 10},
-    {"matrix_size": 256, "min_value": 0, "max_value": 10},
-    {"matrix_size": 512, "min_value": 0, "max_value": 10},
-    {"matrix_size": 1024, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 16, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 32, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 64, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 128, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 256, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 512, "min_value": 0, "max_value": 10},
+    # {"matrix_size": 1024, "min_value": 0, "max_value": 10},
 ]
 
 # total number of times to run each test case
@@ -33,12 +33,16 @@ for set in dataset:
 
     a, b = generate_random_matrices(matrix_size, [min_value, max_value])
 
+    print("MATRIX A: ")
+    print_matrix(a)
+    print("MATRIX B: ")
+    print_matrix(b)
+    
     print(f"Test Case #{current_iteration_count}: Matrix Size ~ {matrix_size}, Minimum Value ~ {min_value}, Maximum Value ~ {max_value}\n")
 
-    # need to add strassen_matrix_multiplication
     algorithms = [classical_matrix_multiplication, 
               divide_and_conquer_matrix_multiplication, 
-              ]
+              strassen_matrix_multiplication]
 
     set_results = {"matrix_size": matrix_size, "min_value": min_value, "max_value": max_value, "results": []}
 
@@ -50,6 +54,8 @@ for set in dataset:
         for _ in range(iterations):
             result, execution_time = time_algorithm(algorithm, a, b)
             execution_times.append(execution_time)
+            print("RESULT: ")
+            print_matrix(result)
         
         avg_execution_time = sum(execution_times) / iterations
         set_results["results"].append({"algorithm": algorithm.__name__, "avg_execution_time": avg_execution_time})
