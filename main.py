@@ -10,13 +10,13 @@ dataset = [
     {"matrix_size": 2, "min_value": 0, "max_value": 10},
     {"matrix_size": 4, "min_value": 0, "max_value": 10},
     {"matrix_size": 8, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 16, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 32, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 64, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 128, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 256, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 512, "min_value": 0, "max_value": 10},
-    # {"matrix_size": 1024, "min_value": 0, "max_value": 10},
+    {"matrix_size": 16, "min_value": 0, "max_value": 10},
+    {"matrix_size": 32, "min_value": 0, "max_value": 10},
+    {"matrix_size": 64, "min_value": 0, "max_value": 10},
+    {"matrix_size": 128, "min_value": 0, "max_value": 10},
+    {"matrix_size": 256, "min_value": 0, "max_value": 10},
+    {"matrix_size": 512, "min_value": 0, "max_value": 10},
+    {"matrix_size": 1024, "min_value": 0, "max_value": 10},
 ]
 
 # total number of times to run each test case
