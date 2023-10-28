@@ -1,4 +1,4 @@
-from utilities.utils import combine_submatrices_horizontally, combine_submatrices_vertically, partition_matrix, add_matrices, subtract_matrices
+from utilities.utils import print_matrix, combine_submatrices_horizontally, combine_submatrices_vertically, partition_matrix, add_matrices, subtract_matrices
 
 def strassen_matrix_multiplication(a, b):
     matrix_length = len(a) 
@@ -12,6 +12,7 @@ def strassen_matrix_multiplication(a, b):
 
     # otherwise calculate strassen equations
     else:
+
         a11, a12, a21, a22 = partition_matrix(a)
         b11, b12, b21, b22 = partition_matrix(b)
 
@@ -22,11 +23,11 @@ def strassen_matrix_multiplication(a, b):
         t = strassen_matrix_multiplication(add_matrices(a11, a12), b22)
         u = strassen_matrix_multiplication(subtract_matrices(a21, a11), add_matrices(b11, b12))
         v = strassen_matrix_multiplication(subtract_matrices(a12, a22), add_matrices(b21, b22))
-
-        c11 = subtract_matrices(add_matrices(p, s), add_matrices(t, v))
+        
+        c11 = add_matrices(p, add_matrices(subtract_matrices(s, t), v))
         c12 = add_matrices(r, t)
         c21 = add_matrices(q, s)
-        c22 = subtract_matrices(add_matrices(p, r), add_matrices(q, u))   
+        c22 = add_matrices(p, add_matrices(subtract_matrices(r, q), u))
     
     c1 = combine_submatrices_horizontally(c11, c12)
     c2 = combine_submatrices_horizontally(c21, c22)
