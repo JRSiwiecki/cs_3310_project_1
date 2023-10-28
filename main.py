@@ -33,7 +33,7 @@ for set in dataset:
 
     a, b = generate_random_matrices(matrix_size, [min_value, max_value])
 
-    print(f"Test Case #{current_iteration_count}: Matrix Size -> {matrix_size}, Minimum Value -> {min_value}, Maximum Value -> {max_value}\n")
+    print(f"Test Case #{current_iteration_count}: Matrix Size ~ {matrix_size}, Minimum Value ~ {min_value}, Maximum Value ~ {max_value}\n")
 
     # need to add strassen_matrix_multiplication
     algorithms = [classical_matrix_multiplication, 
